@@ -1,0 +1,14 @@
+{
+"######" : "Configuración Base de Datos",
+"HOST"   : "localhost",
+"USER"   : "root",
+"PASS"   : "",
+"DBNAME" : "ubigeo_peru",
+"DEBUG"  : true,
+
+"######" : "Configuración Metas Web",
+"AUTHOR" : "Anthony Cajacuri Ordoñez",
+"WEBSITE" : "Ancaor Web",
+"######" : "ID APIS",
+"FB_ID"  : ""
+}

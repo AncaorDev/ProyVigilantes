@@ -1,0 +1,31 @@
+{
+  "name": "vigilantes",
+  "version": "0.0.0",
+  "description": "proyecto vigilantes",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.3",
+    "bootstrap-material-design": "^4.0.0-beta.4",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.6",
+    "swiper": "^4.1.0",
+    "tether": "^1.4.3"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "gulp-install": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vigilantes"
+  ],
+  "author": "Anthony",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AncaorLog/ancaorweb/issues"
+  }
+}
