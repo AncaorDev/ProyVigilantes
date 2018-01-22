@@ -3,7 +3,7 @@
 "HOST"   : "localhost",
 "USER"   : "root",
 "PASS"   : "",
-"DBNAME" : "ubigeo_peru",
+"DBNAME" : "ubigeoperu",
 "DEBUG"  : true,
 
 "######" : "Configuración Metas Web",

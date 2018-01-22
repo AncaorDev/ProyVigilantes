@@ -78,6 +78,11 @@
 		margin-left: 0px;
 	}
 }
+
+.cont-publicaciones {
+	padding: 24px;
+}
+
 .btn-normal{
 	display: inline-block;
 	padding-top: 5px; 
@@ -182,59 +187,64 @@
 	}
 }
 
-/* FIN - TEXTOS */
-
-#section-lykrune {
-    background:url(../images/fondo4.jpg);
-    padding-bottom: 90px; 
-    background-size: cover;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 0px 0px; 
-    background-attachment: fixed;
-    /*padding-top: 20px;*/
-    /*background-color: rgb(255, 255, 255);*/
-    }    
-
-@media(min-width: 1024px) {
-    #lykrune {
-        height: 100%;
-    }    
+#other {
+	margin-top: 40px;
+	height: auto;
+	background: rgb(230, 235, 228);
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top:30px;
+	padding-bottom:30px;
 }
-.t-lykrune {
-	margin-top: 0;
-    letter-spacing: 3px;
-    padding-top:60px;
-    text-align: center; 
-    font-size:32px;
-    color: white;
-    font-family: 'PT Sans';
-    font-weight: 900;
-    text-transform:uppercase;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke: 1px white;
-   /* text-shadow:
-   -4px -4px 0 #fff,
-    4px -4px 0 #fff,
-   -4px 4px 0 #fff,
-    4px 4px 0 #fff;*/
+.cont-other {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top:10px;
+  padding-bottom:10px;
+  background: rgb(230, 235, 228);
 }
-@media(min-width: 768px){
-   .t-lykrune {
-        font-size:42px;
-        padding-top:150px;
-        /*margin-left: 40%;*/
-   } 
+.other-info{
+  text-align: left;
+}
+.cont-image-info{
+  width: 100%;
+  text-align: center;
+}
+.cont-image-info > img {
+  width: 50%;
+  margin: 0 auto;
+}
+.other-info > h3{
+  text-align: center;
 }
 
-#section-lunarcode {
-    background:url(../images/ciudad.jpg);
-    padding-bottom: 90px; 
-    background-size: cover;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 0px 0px; 
-    background-attachment: fixed;
-    /*padding-top: 20px;*/
-    /*background-color: rgb(255, 255, 255);*/
-    }  
+.alert-msg {
+  box-shadow: 6px 7px rgb(183, 191, 201);
+}
+.msg-image > img{
+  border:6px rgb(183, 191, 201) solid;
+}
+
+/* ---------------------------------------
+ footer
+---------------------------------------- */
+#enlaces{
+  background-color: rgb(189, 189, 189);
+}
+.cont-enlaces {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+#footer {
+  background: rgb(79, 130, 186);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+.cont-footer {
+
+}
