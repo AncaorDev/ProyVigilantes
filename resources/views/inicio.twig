@@ -17,7 +17,7 @@
 					<div class="cont-publicaciones">
 					{# ROW #}
 					<div class="row">
-						<h3>Últimas publicaciones</h3>
+						<h3 class="text-info ml-3 mt-2 mb-4">Últimas publicaciones:</h3>
 					    {# CARD #}
 					    <div class="card">
 							<div class="card-header bg-primary text-light">
@@ -99,63 +99,18 @@
 					    {# END CARD #}
 					    <hr>
 					    <div class="card">
-						 	<div class="card-body">
+						 	<div class="card-body bg-secondary text-white">
 						    <h5>El acceso a reservas de agua dulce es cuestión de vida o muerte. Por ello, las áreas con reservas importantes serán estratégicas en un futuro cercano.</h5>
 						  	</div>
 						</div>
 					</div>
 					{# END ROW #}
 					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="card w-100">
-								<!-- bg-primary  -->
-								<div class=" row card-body text-white d-flex align-items-center">
-									<div class="col-xs-6 col-md-3">
-										<img style="width:100%;" src="{{IMAGE}}club-logo.png" alt="">
-									</div>
-								    <div style="color:rgb(24, 55, 114);text-align:center;" class="col-xs-6 col-md-8">
-								    	<h4 class="card-title">Como pertenecer al Club Vigilantes del Agua</h4>
-								    </div>
-								</div>
-							</div>
-						</div>
-					</div>
+					{% include 'includes/pertenecer.twig' %}
 				</div>
 
-				<div class="col-md-3" style="padding-top:60px;">
-				<!--Card Dark-->
-				<div class="card card-dark">
-				    <!--Card image-->
-				    <div class="view overlay hm-white-slight">
-				        <img src="https://cdn.pixabay.com/photo/2014/12/24/05/02/drops-of-water-578897__340.jpg" class="img-fluid" alt="">
-				        <a>
-				            <div class="mask"></div>
-				        </a>
-				    </div>
-				    <!--/.Card image-->
-				    <!--Card content-->
-				    <div class="card-body">
-				        <!--Social shares button-->
-				        <a class="activator"><i class="fa fa-share-alt white-text"></i></a>
-				        <!--Title-->
-				        <h4 class="card-title">EL AGUA</h4>
-				        <hr>
-				        <ul class="list-group">
-						  <li class="list-group-item">
-						  	<i class="fa fa-chevron-right" aria-hidden="true"></i>Ciclo Hidrologico 
-						  </li>
-						  <li class="list-group-item">
-						  	<i class="fa fa-chevron-right" aria-hidden="true"></i> Cultura del Agua 
-						  </li>
-						  <li class="list-group-item">
-						  	<i class="fa fa-chevron-right" aria-hidden="true"></i> Huella hídrica
-						  </li>
-						</ul>
-				    </div>
-				    <!--/.Card content-->
-				</div>
-				<!--/.Card Dark-->         
+				<div class="col-md-3" style="padding-top:84px;">
+					{% include 'includes/widget.twig' %}
 				</div>
 			</div>
 		</div>

@@ -101,6 +101,10 @@ a:focus{
 /*
 ======== FIXED =========
 */
+.bg-main {
+    background-color: var(--color-main) !important;
+}
+
 .fonty{
     border-radius: 50%;
     padding: 2px;

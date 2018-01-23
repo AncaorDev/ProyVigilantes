@@ -35,6 +35,7 @@
 <link rel="stylesheet" type="text/css" href="./css/normalize.css">
 <link rel="stylesheet" type="text/css" href="./css/ancaor/fonts/fonts.css?id={{random()}}">
 <link rel="stylesheet" type="text/css" href="./css/main.css?id={{random()}}">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- <link rel="stylesheet" type="text/css" href="./css/animaciones.css?id={{random()}}"> -->
 {% endblock %}
 <script>
@@ -45,6 +46,11 @@
   ga('create', 'UA-75222059-1', 'auto');
   ga('send', 'pageview');
 </script>
+<style>
+	.form-control:focus {
+     box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.25); 
+	}
+</style>
 </head>
 <body>
 {% block content %}{% endblock %}
@@ -133,15 +139,17 @@
 </script>
   <script>
     var swiper = new Swiper('.swiper-container', {
-		// speed         : 600,
-		delay         : 600,
+		speed         : 2200,
+		// delay         : 600,
 		grabCursor    : true,
-      	slidesPerView : 1,
-      	spaceBetween  : 30,
+      	// slidesPerView : 0,
+      	// spaceBetween  : 0,
       	loop          : true,
+		// el            : '.swiper-pagination',
+        dynamicBullets: true,
       	// effect        : 'fade',
 		pagination: { el: '.swiper-pagination',
-					  type: 'progressbar',
+					  // type: 'progressbar',
 					   clickable: false},
       	navigation: { nextEl: '.swiper-button-next',
         			  prevEl: '.swiper-button-prev'},

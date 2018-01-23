@@ -1,53 +1,67 @@
 {% extends "base.twig" %}
-{% block title %} Contaco {% endblock %}
+{% block title %} Inicio {% endblock %}
 {% block head %}{{parent()}}
-<link rel="stylesheet" type="text/css" href="./css/contacto.css?id={{random()}}">
+<link rel="stylesheet" type="text/css" href="./css/inicio.css?id={{random()}}"> 
+{% set img = random(5)  %}
+<style type="text/css">
+	
+</style>
 {% endblock %}
 {% block content %}
-<section id="inicio">
-	
 	{% include 'includes/header.twig' %}
-	<div class="content-cabecera">
-		<div class="form-contact">
-			<div id="content-form" class="col-xs-12 col-md-6 col-md-push-3">
-				<form class="form-horizontal">
-					 <h2 id="">Contacto</h2>
-				    {# Group #}
-					<div class="form-group">
-				      <label for="input" class="col-lg-4 control-label">Nombre</label>
-				      <div class="col-lg-6">
-				        <input type="text" class="form-control" id="inputName" placeholder="Ingrese Nombre">
-				      </div>
-				    </div>
-				    {# end Group  #}
-				    {# Group #}
-					<div class="form-group">
-				      <label for="input" class="col-lg-4 control-label">Correo</label>
-				      <div class="col-lg-6">
-				        <input type="text" class="form-control" id="inputEmail" placeholder="Ingrese Correo">
-				      </div>
-				    </div>
-				    {# end Group  #}
-					{# Group #}
-				    <div class="form-group">
-				      <label for="textArea" class="col-lg-4 control-label">Mensaje</label>
-				      <div class="col-lg-6">
-				        <textarea class="form-control" rows="3" id="textArea"></textarea>
-				        <span class="help-block">Escriba su mensaje.</span>
-				      </div>
-				    </div>
-				    {# end Group  #}
-				    {# Group #}
-				     <div class="form-group">
-				      <div class="col-lg-11 col-lg-offset-1">
-				        <button type="submit" class="btn btn-danger">Enviar</button>
-				      </div>
-				    </div>
-				    {# end Group  #}
-				</form>
+	{% include 'includes/slider.twig' %}
+	<section id="general">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-9">
+					<div class="cont-publicaciones">
+						<form class="form-horizontal">
+							 <h2 id="">Contacto</h2>
+						    {# Group #}
+							<div class="form-group">
+						      <label for="input" class="col-lg-4 control-label">Nombre</label>
+						      <div class="col-lg-6">
+						        <input type="text" class="form-control" id="inputName" placeholder="Ingrese Nombre">
+						      </div>
+						    </div>
+						    {# end Group  #}
+						    {# Group #}
+							<div class="form-group">
+						      <label for="input" class="col-lg-4 control-label">Correo</label>
+						      <div class="col-lg-6">
+						        <input type="text" class="form-control" id="inputEmail" placeholder="Ingrese Correo">
+						      </div>
+						    </div>
+						    {# end Group  #}
+							{# Group #}
+						    <div class="form-group">
+						      <label for="textArea" class="col-lg-4 control-label">Mensaje</label>
+						      <div class="col-lg-6">
+						        <textarea class="form-control" rows="3" id="textArea"></textarea>
+						        <span class="help-block">Escriba su mensaje.</span>
+						      </div>
+						    </div>
+						    {# end Group  #}
+						    {# Group #}
+						     <div class="form-group">
+						      <div class="col-lg-11 col-lg-offset-1">
+						        <button type="submit" class="btn btn-danger">Enviar</button>
+						      </div>
+						    </div>
+						    {# end Group  #}
+						</form>
+					</div>
+					{% include 'includes/pertenecer.twig' %}
+				</div>
+				<div class="col-md-3" style="padding-top:84px;">
+					{% include 'includes/widget.twig' %} 
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
-
+	</section>
 {% endblock %}
+
+{% block postfooter %}
+{% endblock %}
+
+
