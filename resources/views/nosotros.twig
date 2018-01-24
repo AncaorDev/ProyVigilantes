@@ -1,0 +1,140 @@
+{% extends "base.twig" %}
+{% block title %} Inicio {% endblock %}
+{% block head %}{{parent()}}
+<link rel="stylesheet" type="text/css" href="./css/inicio.css?id={{random()}}"> 
+{% set img = random(5)  %}
+<style type="text/css">
+	
+</style>
+{% endblock %}
+{% block content %}
+	{% include 'includes/header.twig' %}
+	{% include 'includes/slider.twig' %}
+	<section id="general">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-9">
+					<div class="cont-publicaciones">
+					<main>
+    					<h2 class="title-services pt-4 blue-text text-center text-info">¿Quienes Somos?</h2>
+ 						<!--Main layout-->
+						<div class="container">
+							<!--Primera División-->
+						    <div class="row pt-4">
+						    	<div class="col-lg-12 mb-5">
+						    		<div class="card">
+									  <div class="card-body bg-main text-light">
+						    			<h5>Vigilantes del agua es una asociación civil sin fines de lucro, encargada de la preservación y cuidado del agua, mediante la vigilancia del buen uso y la difusión de la cultura del agua.</h5>
+									  </div>
+									</div>
+						    	</div>
+						    	<div></div>
+						        <!--Card-1-->
+						        <div class="col-lg-6">
+						            <!--Card-->
+						            <div class="card wow fadeIn" data-wow-delay="0.4s">
+						                <!--Card image-->
+						                <img class="img-fluid" src="./images/vision.jpg" alt="Constructora">
+						                <!--Card content-->
+						                <div class="card-body">
+						                    <!--Title-->
+						                    <h4 class="card-title text-center">Visión</h4>
+						                    <hr>
+						                    <!--Text-->
+						                    <p class="card-text">Sere lideres, en la preservación y cuidado del agua en el Perú y América Latina.</p>
+						                    <!-- <a href="#" class="blue-text mt-0 d-flex flex-row-reverse"> -->
+						                        <!-- <h5 class="waves-effect p-2">Leer Mas</h5> -->
+						                    <!-- </a> -->
+						                </div>
+
+						            </div>
+						            <!--/.Card-->
+						        </div>
+						        <!--First columnn-->
+						        <!--Second columnn-->
+						        <div class="col-lg-6">
+						            <!--Card-->
+						            <div class="card wow fadeIn" data-wow-delay="0.6s">
+						                <!--Card image-->
+						                <img class="img-fluid" src="./images/mision.jpg" alt="Telecomunicaciones">
+						                <!--Card content-->
+						                <div class="card-body">
+						                    <!--Title-->
+						                    <h4 class="card-title text-center">Mision</h4>
+						                    <hr>
+						                    <!--Text-->
+						                    <p class="card-text">Contribuir al cuidado del agua, vigilando y supervisando su consumo racional y buen uso, en beneficio de la población.</p>
+						                    <!-- <a href="#" class="blue-text mt-0 d-flex flex-row-reverse">
+						                        <h5 class="waves-effect p-2">Leer Mas</h5>
+						                    </a> -->
+						                </div>
+						            </div>
+						            <!--/.Card-->
+						        </div>
+						        <!--Second columnn-->
+
+						        <!--Third columnn-->
+						        <div class="col-lg-6 mt-3">
+						            <!--Card-->
+						            <div class="card wow fadeIn" data-wow-delay="0.8s">
+						            	<!--Card image-->
+						 				<!-- <img class="img-fluid" src="./images/segeta/seguridad.jpg" alt="Telecomunicaciones"> -->
+						                <!--Card content-->
+						                <div class="card-body">
+						                    <!--Title-->
+						                    <h4 class="card-title text-center">Objetivo General</h4>
+						                    <hr>
+						                   <!--Text-->
+						                    <p class="card-text">Servicios de calidad con respecto a la seguridad electr&oacute;nica.</p>
+						                    <a href="#" class="blue-text mt-0 d-flex flex-row-reverse">
+						                        <h5 class="waves-effect p-2">Leer Mas</h5>
+						                    </a>
+						                </div>
+
+						            </div>
+						            <!--/.Card-->
+						        </div>
+						        <!--Third columnn-->
+						        <!--Fourth columnn-->
+						        <div class="col-lg-6 mt-3">
+						            <!--Card-->
+						            <div class="card wow fadeIn" data-wow-delay="0.8s">
+						            	<!--Card image-->
+						 				<!-- <img class="img-fluid" src="./images/segeta/seguridad.jpg" alt="Telecomunicaciones"> -->
+						                <!--Card content-->
+						                <div class="card-body">
+						                    <!--Title-->
+						                    <h4 class="card-title text-center">Objetivos Específicos</h4>
+						                    <hr>
+						                   <!--Text-->
+						                    <p class="card-text">Servicios de calidad con respecto a la seguridad electr&oacute;nica.</p>
+						                    <a href="#" class="blue-text mt-0 d-flex flex-row-reverse">
+						                        <h5 class="waves-effect p-2">Leer Mas</h5>
+						                    </a>
+						                </div>
+
+						            </div>
+						            <!--/.Card-->
+						        </div>
+						        <!--Third columnn-->
+						    </div>
+						    <!--/.Second row-->
+						</div>
+						<!--/.Main layout-->
+						</main>					
+					</div>
+					{% include 'includes/pertenecer.twig' %}
+				</div>
+
+				<div class="col-md-3" style="padding-top:84px;">
+					{% include 'includes/widget.twig' %} 
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block postfooter %}
+{% endblock %}
+
+

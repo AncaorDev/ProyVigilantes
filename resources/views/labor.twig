@@ -1,0 +1,42 @@
+{% extends "base.twig" %}
+{% block title %} Inicio {% endblock %}
+{% block head %}{{parent()}}
+<link rel="stylesheet" type="text/css" href="./css/inicio.css?id={{random()}}"> 
+{% set img = random(5)  %}
+<style type="text/css">
+	
+</style>
+{% endblock %}
+{% block content %}
+	{% include 'includes/header.twig' %}
+	{% include 'includes/slider.twig' %}
+	<section id="general">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-9">
+					<div class="cont-publicaciones">
+						<h3 class="negrita" style="text-align: center;color: rgb(0, 54, 112);">¡¡ Vigilemos el Cuidado del Agua !!</h3>
+						<hr>
+						<!-- <h4>Jumbotron</h4> -->
+						<img src="public/resources/images/casa.jpg" alt="">
+						<p>Vigilamos el cuidado del agua en nuestras casas</p>
+						<p>Vigilamos el cuidado del agua en las calles de nuestra ciudad</p>
+						<p>Vigilamos la calidad del agua que consumimos</p>
+						<p>Difundimos la Cultura del Agua</p>
+						<p>Capacitamos a niños y jóvenes en el cuidado del agua</p>
+						<p>Realizamos campañas sobre el consumo racional del agua y evitar su desperdicio</p>
+					</div>
+					{% include 'includes/pertenecer.twig' %}
+				</div>
+				<div class="col-md-3" style="padding-top:84px;">
+					{% include 'includes/widget.twig' %} 
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block postfooter %}
+{% endblock %}
+
+

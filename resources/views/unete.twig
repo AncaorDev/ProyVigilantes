@@ -1,0 +1,56 @@
+{% extends "base.twig" %}
+{% block title %} Inicio {% endblock %}
+{% block head %}{{parent()}}
+<link rel="stylesheet" type="text/css" href="./css/inicio.css?id={{random()}}"> 
+{% set img = random(5)  %}
+<style type="text/css">
+	
+</style>
+{% endblock %}
+{% block content %}
+	{% include 'includes/header.twig' %}
+	{% include 'includes/slider.twig' %}
+	<section id="general">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-9">
+					<div class="cont-publicaciones">
+						<h3 class="text-info ml-3 mt-2 mb-4">ÚNETE</h3>
+						{# ROW #}
+						<div class="jumbotron">
+							<form>
+							  <div class="form-group">
+							    <label for="exampleInputEmail1">Nombres y Apellidos</label>
+							    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese Nombres y Apellidos">
+							    <small id="emailHelp" class="form-text text-muted"></small>
+							  </div>
+							  <div class="form-group">
+							    <label for="exampleInputPassword1">Correo Electrónico</label>
+							    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="E-mail">
+							  </div>
+							  <!-- <div class="form-check">
+							    <label class="form-check-label">
+							      <input type="checkbox" class="form-check-input">
+							      Check me out
+							    </label>
+							  </div> -->
+							  <button type="submit" class="btn btn-primary">Enviar</button>
+							</form>
+						</div>
+						{# END ROW #}
+					</div>
+					{% include 'includes/pertenecer.twig' %}
+				</div>
+
+				<div class="col-md-3" style="padding-top:84px;">
+					{% include 'includes/widget.twig' %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block postfooter %}
+{% endblock %}
+
+
