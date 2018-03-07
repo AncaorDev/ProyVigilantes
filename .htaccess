@@ -1,0 +1,30 @@
+#reglas del servidor
+RewriteEngine on
+
+#Estas dos líneas son muy importantes, lo que hacen es decirle a Apache que sólo puede crear direcciones amigables si el directorio especificado no existe.
+
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f 
+
+#Para obtener el primer valor, que sera la página a la que se desea accesar:
+# RewriteRule => Metodo con la cual nos permitira modicar las url
+# Después de acento circunflejo ^ "Alt + 94" indicamos el path que se usara seguido del path original
+# () => Dentro de un paréntesis podemos poner reglas
+#Para obtener la variable de la pagina al que se quiere accesar
+#RewriteRule ^(.*)$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9\ -]*)$ index.php?page=$1
+
+
+
+RewriteRule ^panel/([a-zA-Z0-9\ -]*)$ index.php?page=panel&subpage=$1
+RewriteRule ^panel/proyectos/([a-zA-Z0-9\ -]*)$ index.php?page=panel&subpage=proyectos&action=$1
+RewriteRule ^panel/proyectos/edit/([a-zA-Z0-9\ -]*)$ index.php?page=panel&subpage=proyectos&action=edit&dato=$1
+
+#ErrorDocument 404 /public/views/error/404.phtml
+
+
+#Extensiones que soporte php.
+	#AddType => para agregar el tipo.
+	#application/x-httpd-php => el tipo de lenguaje.
+	#.phtml .htm las extensiones que se desea.
+AddType application/x-httpd-php .phtml .htm

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<?php include ('public/views/modulos/head.phtml') ?>
+<style type="text/css">	
+	.error{		
+		margin-top: 80px;
+		text-align: center; 
+	}
+	.error > h2, h1, p{
+		color: rgb(255,255,255);
+		text-shadow: 2px 2px rgb(0,0,0);
+	}
+	.error > h1 {
+		margin-top: -10px;
+	}
+	.error p {
+		margin-top: 70px;
+		font-size: 21px;
+		color: rgb(255,255,255);
+		text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+	}
+	.error > h3 > a {
+		text-decoration: none;
+		text-shadow: 2px 0px rgb(0,0,0);
+	}
+	#body-error {
+		background: url(<?=IMAGE?>gatoworld.jpg);
+		height: 100%;
+		max-height: 100%;
+		width: 100%;
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		border-collapse: collapse;
+		background-position: center;
+	}
+</style>
+<title>Error 404 - Página no Encontrada </title>
+</head>
+<body>
+
+<?php include ('public/views/modulos/navprincipal.phtml') ?>
+<div class="container-image-header">
+	<div class="row-image-header">
+		<div class="cont-img">
+			<img src="<?=IMAGE?>writecode.png" alt="">
+		</div>
+	</div>
+</div>
+<section id="body-error">
+	<div class="container">
+		<div class="row">
+			<div class="error">
+				<h1>ERROR 404</h1> <br>
+				<h2>Página no Encontrada</h2>
+				<h3><a  class="btn btn-primary" href="<?= HOME ?>">Ir a la página principal</a></h3>
+				<p>"Mientras tu buscas algo que no existe los gatos piensan <br> en dominar el mundo."</p>
+			</div>
+		</div>
+	</div>
+</section>
+<?php include ('public/views/modulos/footer.phtml') ?>	
+</body>
+</html>

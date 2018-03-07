@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<?php include VIEWS.'includes/panel-head.inc'; ?>
+<title> Login </title>
+</head>
+  <body class="login">
+    <div>
+    
+      <div class="login_wrapper">
+        
+        <div class="animate form login_form">
+          <section class="login_content">
+          <div id="ajaxlogin" >
+          
+        </div>
+            <form id="formlogin" action="" method="POST" class="form-horizontal form-label-left" novalidate>
+              <h1>Iniciar Sesión</h1>
+              <div>
+                <input id="user" name="user" type="text" class="form-control" placeholder="Username" data-validate-length-range="5,20" required="required" />
+              </div>
+              <div>
+                <input id="pass" type="password" class="form-control" placeholder="Password" required="required"/>
+              </div>
+              <div style="margin-top:-10px;padding-bottom:10px;">
+                <input id="sesion" type="checkbox"> Mantener Sesión  
+              </div>
+              <div>
+                <input id="ingresar" class="btn btn-default submit" type="submit"> 
+                <input id="limpiar" class="btn btn-default submit" type="reset">
+                <!-- <a class="reset_pass" >Recuperar Contraseña</a> -->
+              </div>
+              <div>
+                 
+              </div>
+
+              <div class="clearfix"> </div>
+
+              <div class="separator">
+                
+                <div class="clearfix"></div>
+                <br />
+
+                <div>
+                  <h1> </h1>
+                  <p> Ingreso al Panel Control</p>
+                  <p> RunceCube System - LidPanel </p>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <?php include VIEWS.'includes/panel-footer-files.inc' ?>
+  </body>
+</html>

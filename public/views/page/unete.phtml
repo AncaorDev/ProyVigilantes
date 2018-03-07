@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<?php include (VIEWS.'modulos/head.phtml') ?>
+<title>Pagina Principal</title>
+</head>
+<body>
+<section>
+<div class="logo col-md-12">
+	<div class="col-md-4">
+		<a href="<?=HOME?>"><img class="img-logo" src="<?=IMAGE?>logo.png" alt=""> </a>
+	</div>
+	<div class="data-logo col-md-8">
+		<p class="txt-logo1">info@dominio.org.pe</p>
+		<div class="icons">
+			<span class="icon icon-fb"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+			<span class="icon icon-tw"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+		</div>
+		<div class="busqueda">
+			<form class="navbar-form navbar-right" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control input-busqueda" placeholder="Busca en el Sitio">
+		        </div>
+		        <button type="submit" class="btn btn-primary btn-busqueda">Buscar</button>
+		    </form>	
+		</div>
+	</div>
+
+</div>
+</section>
+<?php include (VIEWS.'modulos/navprincipal.phtml') ?>
+<!-- 
+<div id="slider_wrap">
+    <ul style="display: none;">
+		<li lcms_img="<?=IMAGE?>qw.jpg">
+		<h4 id="txt_heading">Diseño de Páginas Web a Medida</h4>
+		<br>
+
+            <a href="" class="boton">Ver Más</a>           
+		</li>
+		<li lcms_img="<?=IMAGE?>life.jpg">Any content</li>
+		<li lcms_img="<?=IMAGE?>gotas.jpg">test 3</li>
+	</ul>
+</div> -->
+
+<div class="container-image-header">
+	<div class="row-image-header">
+		<div class="cont-img">
+			<!-- <img src="<?=IMAGE?>writecode.png" alt=""> -->
+		</div>
+	</div>
+</div>
+<section id="body">
+	<div class="body-data">
+		<div class="body-post col-md-8">
+			<div class="noticias">
+				<h3 class="negrita" style="text-align: center;color: rgb(0, 54, 112);">¿COMO PERTENECER AL CLUB VIGILANTES DEL AGUA?</h3>
+				<br>
+				<h4>REQUISITOS</h4>
+				<li>Tener entre 12 a 28 años de edad </li>
+				<li>Menores de 18 años, con autorización de padre o tutor</li>
+				<li>Llenar la solicitud de inscripción</li>
+				<p style="text-align: center;"><img style="background-color: white;border-radius: 50%;text-align: center;" src="<?=IMAGE?>convocados.jpg" alt=""></p>
+				 <div class="form-group">
+			       <div class="col-md-12" style="text-align: center;">
+			              <!-- <button type="reset" class="btn btn-primary">Cancel</button> -->
+			     	<a id="btnenviar" type="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i> Inscribete aquí</a>
+			        </div>
+			    </div>
+			    <div class="clear" style="clear:both;padding-bottom: 20px;"></div>
+			</div>
+		</div>
+		<?php include (VIEWS.'modulos/widget.phtml') ?>
+	</div>
+	<!-- <div class="clear" style="clear:both;"></div>	 -->
+</section>
+<div class="clear" style="clear:both;"></div>
+<?php include (VIEWS.'modulos/semi-footer.phtml') ?>	
+<?php include (VIEWS.'modulos/footer.phtml') ?>	
+</body>
+</html>

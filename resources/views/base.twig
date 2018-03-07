@@ -25,8 +25,9 @@
 <meta name="theme-color" content="#FF3131">
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css" href="{{DIR_LIBS}}bootstrap4/css/bootstrap.css">
+<link rel="stylesheet" href="{{DIR_LIBS}}mdb/css/mdb.css">
 <!-- Material Bootstrap -->
-<link rel="stylesheet" type="text/css" href="{{DIR_LIBS}}bootstrap-material-design/css/bootstrap-material-design.min.css">
+{# <link rel="stylesheet" type="text/css" href="{{DIR_LIBS}}bootstrap-material-design/css/bootstrap-material-design.min.css"> #}
 <!-- SWIPER -->
 <link rel="stylesheet" type="text/css" href="{{DIR_LIBS}}swiper/css/swiper.min.css">
 <!-- Fontello -->
@@ -59,63 +60,78 @@
 </div>	
 <!-- <a id="version" href="version" style="display: block;"> <i class="icon-info-circled"></i>Versión </a> -->
 {% block footer %}
-
-<section id="other">
-	<div class="cont-other row" style="margin:0;">
-		<div class="other-info col-md-4">
-			<div class="cont-image-info">
-				<img src="{{IMAGE}}equipo.png" alt="">
+<section class="pertenecer">
+	<div class="col-xs-12 col-md-10 mx-auto">
+		<div class="card w-100 cont-pertenecer">
+			<!-- bg-primary  -->
+			<div class=" row card-body text-white d-flex align-items-center w-100">
+				<div class="d-flex col-xs-12 col-md-6 mx-auto w-100">
+					<img class="w-25 h-100" src="{{IMAGE}}logo_prueba.png" alt="">
+					<div class="pl-5">
+						<a href="unete"><img src="{{IMAGE}}pertenecer.png" alt=""></a>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="other-info col-md-4">
-			<h3>Actividades</h3>
-			<ul>
-				<li>Exposiciones</li>
-				<li>Participación Ciudadana</li>
-				<li>Participación Empresarial</li>
-			</ul>
-		</div>
-		<div class="other-info col-md-4">
-			<h3>Capacitación</h3>
-			<ul>
-				<li>Centros educativos</li>
-				<li>Instituciones</li>
-			</ul>
-		</div>
-		
 	</div>
 </section>
-<section id="enlaces">
-	<div class="cont-enlaces row" style="margin:0;">
-		<div class="col-md-6">
-			<span>
-				Vigilantes del Agua tiene el objetivo de provomer la cultura del cuidado del Agua
-			</span>
-		</div>
-		<div class="col-md-3">
-			<h4>Enlaces de Interes</h4>
-			<ul>
-				<li><a style="color: rgb(44, 62, 80);" href="nosotros">Quienes Somos</a></li>
-			</ul>
-		</div>
-		<div class="col-md-2">
-			<p>
-				Nosotros
-			</p>
-			<p> Perú Jr. Av Lugar Lima - Perú.  <br>
-			Tel: (511) 000-0000 </p>
-		</div>
+<section id="other">
+	<div class="cont-other row w-75 mx-auto" style="margin:0;">
+			<div class="other-info col-md-4">
+				<div class="cont-icon-other">
+					<i class="icon-link"></i>
+				</div>
+				<h4>Enlaces de Interes</h4>
+				<ul>
+					<li><a style="color: rgb(44, 62, 80);" href="nosotros">Quienes Somos</a></li>
+				</ul>
+			</div>
+			<div class="other-info col-md-4">
+				<div class="cont-icon-other">
+					<i class="icon-calendar-4"></i>	
+				</div>
+				<h3>Actividades</h3>
+				<ul>
+					<li><a style="color: rgb(44, 62, 80);" href="nosotros">Exposiciones</a></li>
+					<li><a style="color: rgb(44, 62, 80);" href="nosotros">Participación Ciudadana</a></li>
+					<li><a style="color: rgb(44, 62, 80);" href="nosotros">Participación Empresarial</a></li>
+				</ul>
+			</div>
+			<div class="other-info col-md-4">
+				<div class="cont-icon-other">
+					<i class="icon-users"></i>	
+				</div>
+				<h3>Capacitación</h3>
+				<ul>
+					<li><a style="color: rgb(44, 62, 80);" href="nosotros">Centros educativos</a></li>
+					<li><a style="color: rgb(44, 62, 80);" href="nosotros">Instituciones</a></li>
+				</ul>
+			</div>
 	</div>
 </section>
-<!-- <section id="footer">
-	<div class="cont-footer">	
-		<p>Ila Perú 2017  </p>
+<div class="footer-post">
+        <h6>"Vigilantes del Agua tiene el objetivo de provomer la cultura del cuidado del Agua"</h6>
+		<hr class="separador-footer">
+		<div class="row">
+			<div class="cont-item col-md-4">
+				<span class="icon-item"><i class="icon-mail-1"> </i></span>
+				<span class="title-item">Mail</span>
+				<span class="val-item"> admin@vigilantesdelagua.org  </span>
+			</div>
+			<div class="cont-item col-md-4">
+				<span class="icon-item"><i class="icon-phone"> </i></span>
+				<span class="title-item">Tel&eacute;fono</span>
+				<span class="val-item"> 123456789 </span>
+			</div>
+			<div class="cont-item col-md-4">
+				<span class="icon-item"><i class="icon-location"> </i></span>
+				<span class="title-item">Direcci&oacute;n</span>
+				<span class="val-item"> Direcci&oacute;n </span>
+			</div>
+		</div>
 	</div>
-</section> -->
-<div class="clearfix"></div>
-
+<!-- /footer content -->
 {% endblock %}
-
 {% block postfooter %}
 
 {% endblock %}
@@ -137,43 +153,26 @@
 	  "description" : "Creado con el fin de mostrar mis conocimientos de Programación y Diseño Web"
 	}
 </script>
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-		speed         : 2200,
-		// delay         : 600,
-		grabCursor    : true,
-      	// slidesPerView : 0,
-      	// spaceBetween  : 0,
-      	loop          : true,
-		// el            : '.swiper-pagination',
-        dynamicBullets: true,
-      	// effect        : 'fade',
-		pagination: { el: '.swiper-pagination',
-					  // type: 'progressbar',
-					   clickable: false},
-      	navigation: { nextEl: '.swiper-button-next',
-        			  prevEl: '.swiper-button-prev'},
-    	preloadImages:true,
-		autoplay: {
-			delay: 1200,
-		},
-    });
-  </script>
-<script type="text/javascript">
-//   $(document).ready(function () {
-//     var mySwiper = new Swiper ('.swiper-container', {
-// 		speed       : 600,
-//       	parallax    : true,
-//      	spaceBetween: 30,
-//       	effect      : 'fade',
-//       	pagination  : { el        : '.swiper-pagination',
-// 			            clickable : true},
-//       	navigation  : { nextEl: '.swiper-button-next',
-// 					    prevEl: '.swiper-button-prev'},
-// 		preloadImages:true
-//     })
-//   });
- </script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+        // autoHeight: true, //enable auto height
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect : 'fade',
+        autoplay: {
+           delay: 5000,
+        },
+        virtualTranslate : true,
+        loop: true
+        });
+</script>
 <script src="./js/generales.js?id={{random()}}"></script>
 <script src="./js/scroll.js?id={{random()}}"></script>
 <script src="./js/cambios.js?id={{random()}}"></script>

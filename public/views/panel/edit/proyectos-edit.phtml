@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<?php include VIEWS.'includes/panel-head.inc'; ?>
+<title></title>
+</head>
+<!-- BODY -->
+<body class="nav-md">
+<!-- div container -->
+<div class="container body">
+  <!-- main_container -->  
+  <div class="main_container">
+    <?php include VIEWS.'includes/panel-menu.inc'; ?>
+    <?php include VIEWS.'includes/panel-top-navigation.inc' ?>
+    <!-- page content -->
+    <div class="right_col" role="main">
+      <!-- Header Pages -->
+      <div class="header-pages"> 
+
+      	<div><?=$prueba=""?></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+                    <!-- x panel -->
+          <div class="x_panel">
+            <div class=" row x_title">
+              <div class="col-md-8 col-xs-12">  
+              <h2 class="h2-none" style="width:100%;"><span class="glyphicon glyphicon-book"></span> Editar Proyecto <?=$dataById['datos'][0]['nameProy']?> </h2>
+              </div>
+              <div class="col-md-4" style="text-align:right;">
+                
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              </div>        
+            </div>
+            <!-- x content-->
+            <div class="x_content"> 
+            <div class="data-page-panel">
+              <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="tabPages" class="nav nav-tabs bar_tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#lpages" id="lpages-tab" role="tab" data-toggle="tab" aria-expanded="true"> Contenido </a>
+                  </li>
+                  <!-- data-toggle="modal" data-target="#FormPage" -->
+                  <li role="presentation" class="">
+                    <a href="#formpage" role="tab" id="formpage-tab" data-toggle="tab" aria-expanded="false"> Detalles</a>
+                  </li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade active in" id="lpages" aria-labelledby="lpages-taba"> 
+                    <input id="nomeditpage" type="hidden" value="<?=strtolower($dataById[0]['nomProy'])?>">      
+                    <div class="row">
+                      <div class="col-md-3 col-xs-12">
+                      <p>
+                          Nombre: <?=$dataById['datos'][0]['nameProy']?> <br>
+                          Descripción: <?=$dataById['datos'][0]['descripProy']?> <br>
+                          Departamento : <?=$dataById['datos'][0]['departamento']?> <br>
+                          Provincia: <?=$dataById['datos'][0]['provincia']?> <br>
+                          Distrito: <?=$dataById['datos'][0]['distrito']?> <br>
+                          <hr>
+                          <a class="btn btn-primary" href="<?=HOME.'/panel/proyectos'?>">Volver al listado</a>
+
+                        </p>
+                      </div>
+                      <div class="col-md-6 col-xs-12">
+                        <div id="summernote">
+                        <?php include VIEWS.'page/data/data-'.$dataById['datos'][0]['idProy'].'.phtml'; ?>
+                        <!-- <?php //$ruta dirname(__FILE__); ?> -->
+                        </div>
+                      </div>  
+                  </div>
+                </div>
+                  <div role="tabpanel" class="tab-pane fade" id="formpage" aria-labelledby="form-tab">
+                    <div class="col-md-9">
+                        <div id="progress" style="display:none;" class="progress progress-striped active">
+                        <div id="barra-estado" class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <div class="col-lg-12 col-xs-12" id="mensaje"></div>
+                        <?php include VIEWS.'panel/forms/form-proyectos.inc.php' ?>
+                    </div>                
+                  </div>              
+                </div>
+              </div>
+            </div> 
+            </div>
+            <!-- x content -->
+          </div> 
+          <!-- x panel -->
+          </div>
+        </div>
+      </div>
+      <!-- /header pages -->
+    </div>
+    <!-- /page content -->
+  </div>
+  <!-- main container -->
+</div>
+<!-- div container -->
+<!-- /main_container -->
+<?php include VIEWS.'includes/panel-footer-files.inc' ?>
+<script src="<?=HOME?>core/js/funciones/localizacion.js"></script>
+<script src="<?=HOME?>core/js/funciones/proyectos.js"></script>
+<?php include VIEWS.'includes/panel-footer.inc' ?>
+</body>
+<!-- /BODY -->
+</html>

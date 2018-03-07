@@ -17,10 +17,12 @@
 					<div class="cont-publicaciones">
 					{# ROW #}
 					<div class="row">
-						<h3 class="text-info ml-3 mt-2 mb-4">Últimas publicaciones:</h3>
+						<div class="cabecera-publish">
+							<h3 class="text-info ml-3 mt-2 mb-4">Últimas publicaciones:</h3>
+						</div>
 					    {# CARD #}
-					    <div class="card">
-							<div class="card-header bg-primary text-light">
+					    <div class="card card-inicio">
+							<div class="card-header inicio-header">
 						        <h4 class="card-title" style="margin-bottom:0;">AGUA DESARROLLO Y BIENESTAR</h4>
 						    </div>
 					      	<div class="card-body">
@@ -43,11 +45,11 @@
 					    {# END CARD #}
 					    <hr>
 					    {# CARD #}
-					    <div class="card">
-							<div class="card-header bg-primary text-light">
+					    <div class="card card-inicio">
+							<div class="card-header inicio-header">
 						        <h4 class="card-title" style="margin-bottom:0;">EL AGUA EN EL MUNDO</h4>
 						    </div>
-					      	<div class="card-body">
+					      	<div class="card-body ">
 							<div class="row">
 								<div class="col-md-5">
 						        	<img style="width:100%;" src="{{IMAGE}}agua-mundo.jpg" alt="">
@@ -72,8 +74,8 @@
 					    {# END CARD #}
 					    <hr>
 					    {# CARD #}
-					    <div class="card">
-							<div class="card-header bg-primary text-light">
+					    <div class="card card-inicio">
+							<div class="card-header inicio-header">
 						        <h4 class="card-title" style="margin-bottom:0;">AGUA DESARROLLO Y BIENESTAR</h4>
 						    </div>
 					      	<div class="card-body">
@@ -106,7 +108,7 @@
 					</div>
 					{# END ROW #}
 					</div>
-					{% include 'includes/pertenecer.twig' %}
+					
 				</div>
 
 				<div class="col-md-3" style="padding-top:84px;">

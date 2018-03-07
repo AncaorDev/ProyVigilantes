@@ -15,43 +15,9 @@
 			<div class="row">
 				<div class="col-md-9">
 					<div class="cont-publicaciones">
-						<form class="form-horizontal">
-							 <h2 id="">Contacto</h2>
-						    {# Group #}
-							<div class="form-group">
-						      <label for="input" class="col-lg-4 control-label">Nombre</label>
-						      <div class="col-lg-6">
-						        <input type="text" class="form-control" id="inputName" placeholder="Ingrese Nombre">
-						      </div>
-						    </div>
-						    {# end Group  #}
-						    {# Group #}
-							<div class="form-group">
-						      <label for="input" class="col-lg-4 control-label">Correo</label>
-						      <div class="col-lg-6">
-						        <input type="text" class="form-control" id="inputEmail" placeholder="Ingrese Correo">
-						      </div>
-						    </div>
-						    {# end Group  #}
-							{# Group #}
-						    <div class="form-group">
-						      <label for="textArea" class="col-lg-4 control-label">Mensaje</label>
-						      <div class="col-lg-6">
-						        <textarea class="form-control" rows="3" id="textArea"></textarea>
-						        <span class="help-block">Escriba su mensaje.</span>
-						      </div>
-						    </div>
-						    {# end Group  #}
-						    {# Group #}
-						     <div class="form-group">
-						      <div class="col-lg-11 col-lg-offset-1">
-						        <button type="submit" class="btn btn-danger">Enviar</button>
-						      </div>
-						    </div>
-						    {# end Group  #}
-						</form>
+						{% embed "contacto_form.twig" %}
+							{% endembed %}
 					</div>
-					{% include 'includes/pertenecer.twig' %}
 				</div>
 				<div class="col-md-3" style="padding-top:84px;">
 					{% include 'includes/widget.twig' %} 

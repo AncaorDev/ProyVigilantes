@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<?php include VIEWS.'includes/panel-head.inc'; ?>
+<title> Panel de Administración </title>
+</head>
+<!-- BODY -->
+<body class="nav-md">
+  <div class="container body">
+    <!--  Main-Container -->
+    <div class="main_container">
+    <?php include VIEWS.'includes/panel-menu.inc'; ?>
+    <?php include VIEWS.'includes/panel-top-navigation.inc' ?>    
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <!-- top tiles -->
+        <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Visitas en la Página</span>
+            <div class="count">20</div>
+            <span class="count_bottom"><i class="green">4% </i> Con respecto a la semana anterior</span>
+        </div>
+        <!-- /top tiles -->
+      </div>
+      <!-- /page content -->
+    </div>
+     <!--  /Main-Container -->
+  </div>
+<!-- /BODY -->
+<?php include VIEWS.'includes/panel-footer-files.inc' ?>
+<?php include VIEWS.'includes/panel-footer.inc' ?>
+</body>
+</html>

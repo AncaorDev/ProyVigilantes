@@ -15,6 +15,22 @@
     --letras         : rgb(255, 255, 255);
     --card-principal : rgb(41, 43, 44);
     --sizeP          : .8rem;
+    --color_prueba   :black;
+    --color_ancaor   :rgb(255, 49, 49);
+    --color_fentap1  :rgb(221, 84, 63);
+    --color_fentap2  :rgb(31, 98, 147);
+    --color_fentap3  :rgb(0, 88, 110);
+    --color_fentap   :rgb(26, 57, 132);
+    --letras         :rgb(255, 255, 255);
+    --card-principal : rgb(41, 43, 44);
+    
+    --fs-18          : 1.8rem;
+    --fs-16          : 1.6rem;
+    --fs-14          : 1.4rem;
+    --fs-12          : 1.2rem;
+    --s-title        : 1.0rem;
+    --s-sub-title    : .8rem;
+    --s-parrafo      : .7rem;
 }
 
 /* FIN - VARIABLES */
@@ -177,6 +193,41 @@ a:focus{
     background-attachment: fixed;
 }
 */
+ul > li {
+    color: rgb(25, 55, 131);
+    font-weight: bolder;
+}
+#general {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4f82ba+0,1e5799+0,dee2e5+100&0.69+0,1+100 */
+background: -moz-linear-gradient(top, rgba(30,87,153,0.69) 0%, rgba(222,226,229,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(30,87,153,0.69) 0%,rgba(222,226,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(30,87,153,0.69) 0%,rgba(222,226,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b01e5799', endColorstr='#dee2e5',GradientType=0 ); /* IE6-9 */
+    padding-bottom: 50px;
+}
+
+.notice-image > .notice-image-body > p {
+    position: absolute;
+    top: 0;
+}
+.notice-image > .notice-image-body::after {
+    margin-top: 20px;
+    position: absolute;
+    content: '\f4c5';
+    top: 0;
+}
+.cabecera-publish {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-info {
+    font-size: var(--fs-14);
+    color: white !important;
+    font-weight: bolder;
+}
+
 .head_vigilantes {
     width: 100%;
     text-align: center;
@@ -279,6 +330,203 @@ a:focus{
 #icon-down {
    color: var(--color-main); 
    font-size: 1.7rem;
+}
+.card-inicio > .inicio-header {
+    background-image: url('/../images/cabecera_edit.png') !important;
+    background-size: cover;
+    background-color: white;
+    color:rgb(23, 53, 113);
+    font-size: var(--fs-14) !important;
+}
+
+.pertenecer {
+    padding-top: 20px;
+    background: rgb(79, 130, 186);
+}
+.cont-pertenecer {
+     background-image: url('/../images/fondos/playa.jpg') !important;
+     background-attachment: fixed;
+     padding-bottom: 70px;
+     padding-top: 20px;
+     background-size: cover;
+}
+
+#other {
+    margin-top: -40px;
+    height: auto;
+    background: rgb(79, 130, 186);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom:30px;
+}
+.cont-other {
+  color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align: center;
+}
+.cont-icon-other {
+    text-align: center;
+    font-size: var(--fs-18 );
+}
+.other-info {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(25, 55, 131);
+}
+.other-info > ul > li > a{
+    color: white !important;
+    text-decoration: none;
+}
+.other-info > ul {
+    color: white !important;
+    text-align: left;
+}
+.other-info > ul > li{
+    color: white !important;
+}
+.cont-image-info{
+  width: 100%;
+  text-align: center;
+}
+.cont-image-info > img {
+  width: 50%;
+  margin: 0 auto;
+}
+.other-info > h3{
+  text-align: center;
+}
+.header-post{
+    width: 100%;
+    color :white;
+    background-color: rgb(22, 53, 113);
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    font-size: var(--s-sub-title);
+}
+
+/* ---------------------------------------
+ footer
+---------------------------------------- */
+#enlaces{
+  background-color: rgb(189, 189, 189);
+}
+.cont-enlaces {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+#footer {
+  background: rgb(79, 130, 186);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+.footer {
+    padding: 20px;
+    background: var(--card-principal);
+    color: white;
+}
+
+.footer-post{
+    color :white;
+    background-color: rgb(25, 55, 131);
+    padding: 40px;
+    text-align: center;
+    font-size: var(--s-sub-title);
+}
+
+.footer-post p{
+    padding: 0;
+}
+
+.cont-footer {
+
+}
+
+.cabecera-footer {
+    height: 100%;
+}
+
+.cabecera-footer p{
+    text-align: center;
+}
+
+.redes-sociales {
+    text-align: center;
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.enlace-footer-ext {
+    color: rgba(255,255,255,.5);
+}
+.redes-sociales > a{
+    color: white;
+}
+
+.footer-post .separador-footer {
+    background-color: rgb(135, 138, 143);
+}
+
+.cont-icon-redes > .icon-item-redes {
+    padding-top: 8px;
+    padding-bottom:  8px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(79, 130, 186);
+    display:  inline-block;  
+    border-radius: 50%;  
+}
+
+.cont-icon-redes > .icon-item-redes > i{
+    font-size: var(--s-parrafo);
+}
+
+.footer-post > .footer-frase {
+    display: block;
+    font-size: var(--fs-14);
+    color: rgb(190, 192, 194);
+    font-family: 'Pacifico';
+    text-shadow: 1px 1px 3px rgba(154, 150, 150, 0.65);
+    /*font-family: 'Bree Serif';*/
+}
+
+.cont-item:hover .icon-item {
+    cursor: pointer;
+    color:white;
+}
+.cont-item:hover .title-item {
+    cursor: pointer;
+}
+.cont-item:hover .val-item {
+    cursor: pointer;
+    color:white;
+}
+
+.cont-item .icon-item {
+    display: block;
+    font-size: var(--fs-16);
+    color:rgb(135, 138, 143);
+}
+.cont-item .title-item {
+    letter-spacing: 3px;
+    font-size: var(--s-sub-title) !important;
+    padding: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+}
+.cont-item .val-item {
+    color:rgb(135, 138, 143);
+    display: block;
 }
 /* ==========================================================================
    Media Queries

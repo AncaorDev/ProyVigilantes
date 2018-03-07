@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<?php include VIEWS.'includes/panel-head.inc'; ?>
+<title></title>
+</head>
+<!-- BODY -->
+<body class="nav-md">
+<!-- div container -->
+<div class="container body">
+  <!-- main_container -->  
+  <div class="main_container">
+    <?php include VIEWS.'includes/panel-menu.inc'; ?>
+    <?php include VIEWS.'includes/panel-top-navigation.inc' ?>
+    <!-- page content -->
+    <div class="right_col" role="main">
+      <!-- Header Pages -->
+      <div class="header-pages">   
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <!-- x panel -->
+          <div class="x_panel">
+            <div class=" row x_title">
+              <div class="col-md-8 col-xs-6">  
+              <h2 class="h2-none" style="width:100%;"><span class="glyphicon glyphicon-book"></span> Detalles de los Proyectos </h2>
+              </div>
+              <div class="col-md-4 col-xs-6" style="text-align:right;">
+                <a class="well well-sm"> Proyectos <span class="badge" style="background-color:rgb(46, 109, 164);color:white;"> 
+                <?=count($listapage)?> </span>
+                </a>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              </div>        
+            </div>
+            <!-- x content-->
+            <div class="pruebas">
+        
+            </div>
+            <div class="x_content"> 
+            <div class="data-page-panel">
+              <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="tabPages" class="nav nav-tabs bar_tabs" role="tablist">
+                  <li role="presentation" class="active">
+                  <a class="a-tab" href="#lpages" id="lpages-tab" role="tab" data-toggle="tab" aria-expanded="false">Listado</a></li>
+                  <!-- data-toggle="modal" data-target="#FormPage" -->
+                  <li role="presentation" class=""><a class="a-tab" href="#formpage" role="tab" id="formpage-tab" data-toggle="tab" aria-expanded="false"> 
+                   Agregar </a></li>
+
+                  <li role="presentation" class=""><a class="a-tab" href="#conf" role="tab" id="formpage-tab" data-toggle="tab" aria-expanded="false"> 
+                  <i class="fa fa-cog"></i> Otros </a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade active in" id="lpages" aria-labelledby="home-tab">             
+                  <div class="row">
+                    <div class="col-md-12 table-responsive">
+                      <table class="table table-striped table-hover ">
+                      <thead>
+                        <tr>
+                          <th> # (ID) </th>
+                          <th> Nombre del Proyecto</th>
+                          <th> Descripción del Proyecto <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Descripción del proyecto"></i></th>
+                          <th> Departamento <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Departamento"></i></th>
+                          <th> Provincia <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Provincia"></i></th>
+                          <th> Distrito <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Distrito"></i></th>
+                          <th> Acciones</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                       <?php 
+                       if (count($listadetallesdata['datos']) > 0) {
+                          foreach ($listadetallesdata['datos'] as $value) { ?>
+                        <tr class="success" id="tdata<?=$value['idProy']?>">
+                          <td> <?=$value['idProy']?> </td>
+                          <td> <?=$value['nameProy']?>  </td>
+                          <td> <?=$value['descripProy']?>  </td>
+                          <td> <?=$value['departamento']?>  </td>
+                          <td> <?=$value['distrito']?>  </td>
+                          <td> <?=$value['provincia']?>  </td>
+                          <td id="data<?=$value['idProy']?>" data="<?=$value['idProy']?>"> <a href="panel/proyectos/edit/<?=strtolower($value['idProy'])?>" class="btn btn-primary"> Editar </a> <a class="eliminar"><button class="btn btn-danger">  Eliminar </button></a>  </td>
+                        </tr> 
+                       <?php }
+                        } else { ?>
+                          <tr class="success" id="tdata0">
+                            <td colspan="7" style="text-align: center;">No se encontró información en la Base de Datos</td>
+                          </tr> 
+                        <?php } ?>          
+                      </tbody>
+                      </table> 
+                      <p>
+                      <!-- 	Atributo de la Página:
+                      	<li> Sección: Dirección interna hacia una sección de la web, esta se creará según una plantilla</li>
+                      	<li> Enlace: Dirección URL externa (ejemplo: un blog externo,etc) Tener en cuenta que esta no se creara si no solo será una hipervínculo hacia otra web</li> -->
+                      </p>
+                    </div>
+                  </div>   
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="formpage" aria-labelledby="profile-tab">
+                      <div id="progress" style="display:none;" class="progress progress-striped active">
+                        <div id="barra-estado" class="progress-bar" style="width: 0%"></div>
+                      </div>
+                      <div class="col-lg-12 col-xs-12" id="mensaje"></div>
+                       <?php include VIEWS.'panel/forms/form-proyectos.inc.php' ?>                   
+                  </div> 
+                  <div role="tabpanel" class="tab-pane fade" id="conf" aria-labelledby="profile-tab">
+                      <div id="progress" style="display:none;" class="progress progress-striped active">
+                        <div id="barra-estado" class="progress-bar" style="width: 0%"></div>
+                      </div>
+                      <div class="col-lg-12 col-xs-12" id="mensajeDP"></div>
+                      <div class="row">
+                        <div class="col-md-7">
+                           
+                        <!-- ITEM -->
+                          <h2>Opciones de la tabla</h2>
+                          <div class="item form-group">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12" for="name">AUTO_INCREMENT:
+                            </label>
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                            <input type="number" id="ai_number" class="form-control col-md-12 col-xs-12" min="1" max="100"  value="<?=$listadetallesdata['status'][0]['Auto_increment']?>">
+                            </div>
+                            <div class="col-md-5">
+
+                              <button id="btn_ai1" data="manual" class="btn btn-success"> Aplicar </button><i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Se definirá el número elegido"></i>
+
+                              <button id="btn_ai2" data="auto" class="btn btn-success"> Automático </button><i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Se definirá como 1, lo cual sl siguiente en ser insertado tomara el número que falte"></i>
+                               <!-- <button type="reset" class="btn btn-primary">Cancel</button> -->
+                            </div>
+                          </div>
+                        <!-- /ITEM -->
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 table-responsive">
+                          <table class="table table-striped table-hover ">
+                          <thead>
+                            <tr>
+                            
+                              <th> Nombre </th>
+                              <th> Filas </th>
+                              <th> Tamaño </th>
+                              <th> Autoincrement </th>
+                              <th> Motor </th>
+                              <th> Tamaño de Datos </th>
+                              <th> Creado el: </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                           <?php 
+                           foreach ($listadetallesdata['status'] as $status) { ?>
+                            <tr class="success" id="tdata">
+                              <td> <?=$status['Name']?> </td>
+                              <td> <?=$status['Rows']?>  </td>
+                              <td> <?=$status['Data_length']?>  </td>
+                              <td> <?=$status['Auto_increment']?>  </td>
+                              <td> <?=$status['Engine']?>  </td>
+                              <td> <?=$status['Data_length']?> kbs  </td>                          
+                              <td> <?=$status['Create_time']?>  </td>
+                              <td>  </td>
+                            </tr> 
+                           <?php } ?>          
+                          </tbody>
+                          </table> 
+                          <p></p>
+                        </div>
+                      </div>              
+                  </div>             
+                </div>
+              </div>
+            </div> 
+            </div>
+            <!-- x content -->
+          </div> 
+          <!-- x panel -->
+          </div>
+        </div>
+      </div>
+      <!-- /header pages -->
+    </div>
+    <!-- /page content -->
+  </div>
+  <!-- main container -->
+</div>
+<!-- div container -->
+<!-- /main_container -->
+<?php include VIEWS.'includes/panel-footer-files.inc' ?>
+<script src="<?=HOME?>core/js/funciones/localizacion.js"></script>
+<script src="<?=HOME?>core/js/funciones/proyectos.js"></script>
+<?php include VIEWS.'includes/panel-footer.inc' ?>
+</body>
+<!-- /BODY -->
+</html>

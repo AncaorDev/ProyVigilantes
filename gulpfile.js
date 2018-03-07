@@ -21,7 +21,7 @@ gulp.task('sass', function() {
 
 // Moviendo los archivos Js
 gulp.task('js', function() {
-    return gulp.src(['node_modules/bootstrap/dist/js/*.min.js'])
+    return gulp.src(['node_modules/bootstrap/dist/js/*.min.js','node_modules/bootstrap/dist/js/*.min.js.map'])
         .pipe(gulp.dest(b_js))
         // .pipe(browserSync.stream());
 });
@@ -76,6 +76,39 @@ gulp.task('bmd_js', function() {
         .pipe(gulp.dest(bmd_js))
 });
 
+/***********************************************************************
+*************************** MDB FOR BOOTSTRAP *************************
+***********************************************************************/
+// Ruta compilación Bootstrap Material Design
+var  mdb_css   = lbs+'mdb/css/';
+var  mdb_js    = lbs+'mdb/js/';
+var  mdb_img   = lbs+'mdb/img/';
+var  mdb_fonts = lbs+'mdb/font/';
+
+// Copiando 
+gulp.task('mdb_css', function() {
+    return gulp.src(['node_modules/mdbootstrap/css/mdb.css'])
+        .pipe(gulp.dest(mdb_css))
+});
+
+// Copiando los archivos Js
+gulp.task('mdb_js', function() {
+    return gulp.src(['node_modules/mdbootstrap/js/mdb.js'])
+        .pipe(gulp.dest(mdb_js))
+});
+
+// Copiando los archivos de imagen
+gulp.task('mdb_img', function() {
+    return gulp.src(['node_modules/mdbootstrap/img/**/*'])
+        .pipe(gulp.dest(mdb_img))
+});
+
+// Copiando las fuentes
+gulp.task('mdb_fonts', function() {
+    return gulp.src(['node_modules/mdbootstrap/font/**/*'])
+        .pipe(gulp.dest(mdb_fonts))
+});
+
 
 /***********************************************************************
 ****************************** Tether  *********************************
@@ -96,6 +129,25 @@ gulp.task('tt_js', function() {
         .pipe(gulp.dest(tt_js))
 });
 
+/***********************************************************************
+****************************** Swiper  *********************************
+***********************************************************************/
+//Ruta compilación Theter
+var  sw_css = lbs+'swiper/css';
+var  sw_js  = lbs+'swiper/js';
+
+// Copiando 
+gulp.task('sw_css', function() {
+    return gulp.src(['node_modules/swiper/dist/css/*.min.css'])
+        .pipe(gulp.dest(sw_css))
+});
+
+// Copiando los archivos Js
+gulp.task('sw_js', function() {
+    return gulp.src(['node_modules/swiper/dist/js/*.min.js','node_modules/swiper/dist/js/*.esm.js'])
+        .pipe(gulp.dest(sw_js))
+});
+
 
 /***********************************************************************
 ********************** Popper.js UMD  *********************************
@@ -105,29 +157,9 @@ var  ps = lbs+'popper.js';
 
 // Copiando los archivos Js
 gulp.task('ps', function() {
-    return gulp.src(['node_modules/popper.js/dist/umd/*.min.js'])
+    return gulp.src(['node_modules/popper.js/dist/umd/*.min.js','node_modules/popper.js/dist/umd/*.min.js.map'])
         .pipe(gulp.dest(ps))
 });
-
-/***********************************************************************
-****************************** EXAMPLE  *********************************
-***********************************************************************/
-// Ruta compilación Swiper
-var  spcss = lbs+'swiper/css';
-var  spjs = lbs+'swiper/js';
-
-//Copiando los archivos css
-gulp.task('spcss', function() {
-    return gulp.src(['node_modules/swiper/dist/css/*.min.css'])
-        .pipe(gulp.dest(spcss))
-});
-
-//Copiando los archivos js
-gulp.task('spjs', function() {
-    return gulp.src(['node_modules/swiper/dist/js/*.min.js'])
-        .pipe(gulp.dest(spjs))
-});
-
 
 /***********************************************************************
 ****************************** EXAMPLE  *********************************
@@ -143,4 +175,9 @@ gulp.task('spjs', function() {
 
 
 
-gulp.task('run', ['sass','js', 'fa', 'jq', 'fa_fonts','bmd_sass','bmd_js','tt_css','tt_js','ps','spcss','spjs']);
+gulp.task('run_b4', ['sass','js', 'fa', 'jq', 'fa_fonts','bmd_sass','bmd_js','tt_css','tt_js','ps','sw_css','sw_js']);
+
+gulp.task('run_mdb', ['sass','js', 'fa', 'jq', 'fa_fonts','mdb_css','mdb_js','mdb_img','mdb_fonts','tt_css','tt_js','ps','sw_css','sw_js']);
+
+
+
