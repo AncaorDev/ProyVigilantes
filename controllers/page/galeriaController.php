@@ -25,7 +25,7 @@ function index() { //Función que se jecuta al recibir una variable del tipo con
 		if (isset($metodo)) { 
 			
 		} else { // Aquí en caso de que la vista sea publica 
-			View::renderPage('labor');
+			View::renderPage('galeria');
 
 			// ---------------------------------------------------------------- //
 		}

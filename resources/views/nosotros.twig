@@ -29,8 +29,10 @@
 									</div>
 						    	</div>
 						    	<div></div>
+
+						    	{% if datos.metodo == 'vision' %}
 						        <!--Card-1-->
-						        <div class="col-lg-6">
+						        <div class="col-lg-12">
 						            <!--Card-->
 						            <div class="card wow fadeIn" data-wow-delay="0.4s">
 						                <!--Card image-->
@@ -51,8 +53,10 @@
 						            <!--/.Card-->
 						        </div>
 						        <!--First columnn-->
+						        {% endif %}
+						        {% if datos.metodo == 'mision' %}
 						        <!--Second columnn-->
-						        <div class="col-lg-6">
+						        <div class="col-lg-12">
 						            <!--Card-->
 						            <div class="card wow fadeIn" data-wow-delay="0.6s">
 						                <!--Card image-->
@@ -72,7 +76,8 @@
 						            <!--/.Card-->
 						        </div>
 						        <!--Second columnn-->
-
+								{% endif %}
+								{% if datos.metodo == 'objetivos' %}
 						        <!--Third columnn-->
 						        <div class="col-lg-6 mt-3">
 						            <!--Card-->
@@ -85,9 +90,9 @@
 						                    <h4 class="card-title text-center">Objetivo General</h4>
 						                    <hr>
 						                   <!--Text-->
-						                    <p class="card-text">Servicios de calidad con respecto a la seguridad electr&oacute;nica.</p>
+						                    <p class="card-text">Crear y preservar condiciones para asegurar el consumo racional y buen uso del agua, en beneficio de la población.</p>
 						                    <a href="#" class="blue-text mt-0 d-flex flex-row-reverse">
-						                        <h5 class="waves-effect p-2">Leer Mas</h5>
+						                        {# <h5 class="waves-effect p-2">Leer Mas</h5> #}
 						                    </a>
 						                </div>
 
@@ -107,16 +112,23 @@
 						                    <h4 class="card-title text-center">Objetivos Específicos</h4>
 						                    <hr>
 						                   <!--Text-->
-						                    <p class="card-text">Servicios de calidad con respecto a la seguridad electr&oacute;nica.</p>
+						                    <p class="card-text">
+											a.	Difundir hábitos de consumo orientados al no desperdicio del agua. <br>
+											b.	Sensibilizar a la sociedad, sobre la importancia de preservar y cuidar el agua. <br>
+											c.	Promover la participación ciudadana en la Cultura del Agua. <br>
+											d.	Promover la formación y desarrollo de promotores y vigilantes del agua. <br>
+											e.	Constituir el Club Vigilantes del Agua, como base fundamental de su sostenimiento. <br>
+											</p>
 						                    <a href="#" class="blue-text mt-0 d-flex flex-row-reverse">
-						                        <h5 class="waves-effect p-2">Leer Mas</h5>
+						                        {# <h5 class="waves-effect p-2">Leer Mas</h5> #}
 						                    </a>
 						                </div>
 
 						            </div>
 						            <!--/.Card-->
 						        </div>
-						        <!--Third columnn-->
+						        <!--Fourth columnn-->
+						        {% endif %}
 						    </div>
 						    <!--/.Second row-->
 						</div>

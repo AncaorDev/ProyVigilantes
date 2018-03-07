@@ -8,44 +8,35 @@ $auth => autenticación (booleano)
 use app\clases\View;
 use app\clases\Controller;
 use app\clases\Functions as F;
+use app\clases\Session as S;
+use model\utilsModel;
 
 class nosotrosController extends Controller {
 private $dp;
 private $ctr;
 private $bd; 
 private $auth;
-function __construct(){
-	$this -> auth = false; // Si para el acceso necesita estar autenticado
-	$this -> bd = true; // Si se usara la conexión a la base de Datos
-	$this -> ctr = new Controller($bd = $this -> bd); // Ejecutamos una instancia hacia el controlador general
+private $m_utils;
+private $url;
+
+function __construct($url){
+    parent::__construct();
+    $this->auth    = false; // Si para el acceso necesita estar autenticado
+    $this->bd      = true; // Si se usara la conexión a la base de Datos
+    $this->ctr     = new Controller($bd = $this -> bd); // Ejecutamos una instancia hacia el controlador general
+    $this->m_utils = new utilsModel();
+    $this->url     = $url;
 }
 
 function index() { //Función que se jecuta al recibir una variable del tipo controlador
-	if (parent::authenticate($this -> auth)) { // Aquí la vista en caso de que el acceso necesite autenticación
-		if (isset($metodo)) { 
-			
-		} else { // Aquí en caso de que la vista sea publica 
-			View::renderPage('nosotros');
-
-			// ---------------------------------------------------------------- //
-		}
-	} else {
-		// View::renderPage("error.unautorized");
-		F::redirect('login'); // Redirección en caso de autorización
-	}
-}
-
-function subAcceso($dato){
-	/* ******************************************************** 
-	********************** Code for user **********************
-	******************************************************** */
-
-}
-
-function obtenerFrase(){
-	$datos = $this -> ctr -> extractData('phrase|count'); // asignación de datos a la variable array
-	$num = mt_rand(0,$datos['count']-1); // genero un número aleatorio 
-	return $datos['frase'] = $datos['phrase'][$num]['content_phrase']; // extraigo una frase aleatoria
+  if (parent::authenticate($this -> auth)) { // Aquí la vista en caso de que el acceso necesite autenticación
+  // ---- En esta parte el programador es libre de manejarlo a su manera //
+  	$data['metodo'] = $this->url['metodo'];
+    View::renderPage('nosotros',$this -> ctr -> ld, $data);
+  } else {
+    // View::renderPage("error.unautorized");
+    F::redirect('login'); // Redirección en caso de autorización
+  }
 }
 // Fin class
 }
